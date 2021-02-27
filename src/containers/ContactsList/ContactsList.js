@@ -4,6 +4,7 @@ import Contact from "../../components/Contact/Contact";
 import { getContacts } from "../../store/actions/contactsActions";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import Modal from "../../components/UI/Modal/Modal";
+import EditContact from "../EditContact/EditContact";
 
 const ContactsList = () => {
   const dispatch = useDispatch();
@@ -30,9 +31,7 @@ const ContactsList = () => {
   return (
     <div>
       <Modal show={showModal}>
-        <div>
-          <p onClick={() => setShowModal(false)}>x</p>
-        </div>
+        <EditContact />
       </Modal>
       {contactForm}
     </div>
