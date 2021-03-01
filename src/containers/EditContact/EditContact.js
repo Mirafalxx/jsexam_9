@@ -1,8 +1,14 @@
 import React from "react";
 import "./EditContact.js";
 
-const EditContact = () => {
-  return <div>Edit will be here</div>;
+const EditContact = ({ email, name, phone }) => {
+  return (
+    <div>
+      <input value={email} />
+      <input value={name} />
+      <input value={phone} />
+    </div>
+  );
 };
 
 export default EditContact;
